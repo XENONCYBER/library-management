@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("borrow-form");
+  const submitButton = document.getElementById("submit-button");
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-
+    submitButton.disabled = true;
     const bookCode = document.getElementById("book-code").value;
     const bookName = document.getElementById("book-name").value;
     const designation = document.getElementById("person-identification").value;
@@ -22,12 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (response.ok) {
         alert("Book Borrowed Successfully");
+        submitButton.disabled = false;
       } else {
         alert("Error Borrowing Book");
+        submitButton.disabled = false;
       }
     } catch (error) {
       console.error("Error:", error);
       alert("Error Borrowing Book");
+      submitButton.disabled = false;
     }
   });
 });
