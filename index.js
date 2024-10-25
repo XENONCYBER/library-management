@@ -9,7 +9,7 @@ const getHistory = require("./features/history/history");
 const getBorrowedList = require("./features/borrowed-list/borrowed-list");
 
 const app = express();
-
+const port = 8081;
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,8 +18,8 @@ app.use(searchRoutes);
 app.use("/api", borrow);
 app.use("/api", returnBook);
 app.use("/api", getHistory);
-app.use("/api", getBorrowedList)
+app.use("/api", getBorrowedList);
 
-app.listen(5500, () => {
+app.listen(port, () => {
   console.log("Server is running on http://localhost:5500");
 });
