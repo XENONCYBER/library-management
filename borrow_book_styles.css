@@ -1,35 +1,54 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin: auto;
   margin-top: 150px;
+  padding: 20px;
   width: auto;
   max-width: 650px;
-  height: 450px;
+  height: auto;
   font-size: 20px;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(84, 82, 82, 0.4);
   border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
+#data label {
+  display: block;
+  margin: 10px 0 5px;
+  color: aliceblue;
+}
+#data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 #data input,
-#person-identification  {
-  width: 85%;
-  margin: 10px;
-  height: 20px;
+#person-identification {
+  width: 100%;
+  max-width: 600px;
+  margin: 10px 0;
+  padding: 10px;
+  height: 40px;
+  border: 1px solid #ccc;
   border-radius: 7px;
+  font-size: 16px;
+}
+
+#data input:focus,
+#person-identification:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 .buttons {
@@ -38,60 +57,43 @@ form {
   align-items: center;
 }
 
-
+#submit-button {
+  background-color: rgb(40, 195, 40);
+  color: aliceblue;
+  width: 120px;
+  height: 40px;
+  margin: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
 #submit-button:hover {
-  background-color: rgb(40, 195, 40, 0.8);
+  background-color: rgb(34, 170, 34);
 }
 
-form {
+
+.form-group {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="password"],
-form textarea  {
-  width: 90%;
-  padding: 10px;
+.form-group label {
+  margin: 10px 0 5px;
+  align-self: flex-start;
+  color: aliceblue;
+}
+
+.form-group input {
+  width: 100%;
+  max-width: 600px;
   margin: 10px 0;
+  padding: 10px;
+  height: 40px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 7px;
   font-size: 16px;
 }
-
-form textarea  {
-  resize: vertical;
-  height: 100px;
-}
-
-form button {
-  width: 50%;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: #28c328;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #218c21;
-}
-
-form select {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: white;
-    cursor: pointer;
-  }
