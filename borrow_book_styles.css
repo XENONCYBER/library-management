@@ -1,32 +1,54 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
 }
 
 form {
   margin: auto;
   margin-top: 150px;
+  padding: 20px;
   width: auto;
   max-width: 650px;
-  height: 450px;
+  height: auto;
   font-size: 20px;
   background-color: rgba(84, 82, 82, 0.4);
   border-radius: 10px;
-  box-shadow: 1px 1px 4px 4px color(white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #data label {
-  margin: 10px;
-
+  display: block;
+  margin: 10px 0 5px;
   color: aliceblue;
+}
+#data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #data input,
 #person-identification {
-  width: 85%;
-  margin: 10px;
-  height: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px 0;
+  padding: 10px;
+  height: 40px;
+  border: 1px solid #ccc;
   border-radius: 7px;
+  font-size: 16px;
+}
+
+#data input:focus,
+#person-identification:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 .buttons {
@@ -38,12 +60,40 @@ form {
 #submit-button {
   background-color: rgb(40, 195, 40);
   color: aliceblue;
-  width: 100px;
-  height: 30px;
-
+  width: 120px;
+  height: 40px;
   margin: 20px;
   font-size: 20px;
   border: none;
   border-radius: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+#submit-button:hover {
+  background-color: rgb(34, 170, 34);
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group label {
+  margin: 10px 0 5px;
+  align-self: flex-start;
+  color: aliceblue;
+}
+
+.form-group input {
+  width: 100%;
+  max-width: 600px;
+  margin: 10px 0;
+  padding: 10px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 16px;
 }

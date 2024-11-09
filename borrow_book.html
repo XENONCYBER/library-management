@@ -220,51 +220,49 @@
     </div>
     <script src="./components/sidebar.js"></script>
     <script src="./features/search/client.js"></script>
-    <form id="borrow-form">
-      <div id="data">
-        <div>
-          <label for="book-code">Book Code</label><br />
-          <input
-            class="input"
-            type="text"
-            id="book-code"
-            name="bookCode"
-            placeholder="Enter book Code"
-          />
-        </div>
-        <div>
-          <label for="book-name">Book Title</label><br />
-          <input
-            class="input"
-            type="text"
-            id="book-name"
-            name="bookName"
-            placeholder="Enter book Name"
-          />
-        </div>
-        <div>
-          <label for="dropdown"
-            >Designation?<br />
-            <select class="input" id="person-identification" name="designation">
-              <option value="">Select current role</option>
-              <option value="Student">Student</option>
-              <option value="Lecturer">Lecturer</option>
-            </select>
-          </label>
-        </div>
-        <div>
-          <label for="student-usn">USN/ID</label><br />
-          <input
-            class="input"
-            type="text"
-            id="student-usn"
-            name="usn"
-            placeholder="Enter USN"
-          />
-        </div>
-        <div class="buttons">
-          <button type="submit" id="submit-button">Borrow</button>
-        </div>
+
+
+    <form id="borrow-form" class="form-container">
+      <div class="form-group">
+        <label for="book-code">Book Code</label>
+        <input
+          class="input"
+          type="text"
+          id="book-code"
+          name="bookCode"
+          placeholder="Enter book Code"
+        />
+      </div>
+      <div class="form-group">
+        <label for="book-name">Book Title</label>
+        <input
+          class="input"
+          type="text"
+          id="book-name"
+          name="bookName"
+          placeholder="Enter book Name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="person-identification">Designation</label>
+        <select class="input" id="person-identification" name="designation">
+          <option value="">Select current role</option>
+          <option value="Student">Student</option>
+          <option value="Lecturer">Lecturer</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="student-usn">USN/ID</label>
+        <input
+          class="input"
+          type="text"
+          id="student-usn"
+          name="usn"
+          placeholder="Enter USN"
+        />
+      </div>
+      <div class="form-group buttons">
+        <button type="submit" id="submit-button">Borrow</button>
       </div>
     </form>
     <script src="./features/borrow-books/client.js"></script>
